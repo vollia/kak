@@ -4,9 +4,13 @@
 colorscheme one-dark
 
 set-face global PrimaryCursor default,rgb:5F0000
-set-face global SecondaryCursor default,rgb:005010
+set-face global SecondaryCursor default,rgb:105010
+set-face global PrimarySelection default,rgb:505F00
+set-face global SecondarySelection default,rgb:1000B0
 
 add-highlighter global/ show-whitespaces -spc '_' -only-trailing
+add-highlighter global/ show-whitespaces -spc ' '
+add-highlighter global/ show-whitespaces -tab '→'
 add-highlighter global/ dynregex '%reg{/}' 0:+u
 add-highlighter global/ regex \b(?:FIXME|TODO|XXX)\b 0:default+rb
 #add-highlighter global/ column 100 default,bright-black

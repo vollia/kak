@@ -37,8 +37,11 @@ plug "h-youhei/kakoune-surround" %{
   map global surround d ': delete-surround<ret>'        -docstring 'delete'
   map global surround t ': select-surrounding-tag<ret>' -docstring 'select tag'
 }
-plug "alexherbo2/auto-pairs.kak" %{
-  enable-auto-pairs
+# plug "alexherbo2/auto-pairs.kak" %{
+#   enable-auto-pairs
+# }
+plug "https://codeberg.org/straypetal71/twos.kak" config %{
+    twos-register-defaults global
 }
 
 # completion
@@ -47,7 +50,7 @@ plug "ul/kak-lsp" do %{
   cargo install --force --path .
 } config %{
   set-option global lsp_completion_trigger "execute-keys 'h<a-h><a-k>\S[^\h\n,=;*(){}\[\]]\z<ret>'"
-  set-option global lsp_diagnostic_line_error_sign "!"
+  set-option global lsp_diagnostic_line_error_sign "•"
   set-option global lsp_diagnostic_line_warning_sign "•"
   hook global WinSetOption filetype=* %{
     set-option window lsp_hover_anchor false
@@ -59,7 +62,7 @@ plug "ul/kak-lsp" do %{
         [cmake]
         filetypes= ["cmake"]
         command= "cmake-language-server"
-        root = "/usb/bin/cmake"
+        root = "/usr/bin/cmake"
       }
   }
   hook global WinSetOption filetype=(sh) %{

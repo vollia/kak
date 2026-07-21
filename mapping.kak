@@ -67,7 +67,7 @@ map global normal <c-p> %{:enter-user-mode fuzzy<ret>} -docstring "fzf commands"
 map global fuzzy b ": kks-connect terminal kks-buffers<ret>"          -docstring "buffers"
 map global fuzzy f ": kks-connect terminal kks-files<ret>"            -docstring "files"
 map global fuzzy g ": kks-connect terminal kks-grep<ret>"             -docstring "grep"
-map global fuzzy <space> ": kks-connect terminal broot<ret>"              -docstring "broot"
+map global fuzzy <space> ": kks-connect terminal broot<ret>"          -docstring "broot"
 
 # alt + direction (insert mode)
 map global insert <a-h> '<a-;><a-h>'
