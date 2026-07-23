@@ -145,8 +145,8 @@ plug "ul/kak-lsp" do %{
 
 # snippets
 plug "occivink/kakoune-phantom-selection" config %{
-  map global user f     ": phantom-selection-add-selection<ret>"
-  map global user F     ": phantom-selection-select-all; phantom-selection-clear<ret>"
-  map global user <a-f> ": phantom-selection-iterate-next<ret>"
-  map global user <a-F> ": phantom-selection-iterate-prev<ret>"
+  map global user f     ": phantom-selection-add-selection<ret>" -docstring "phantom"
+  map global user F     ": phantom-selection-select-all; phantom-selection-clear<ret>" -docstring "phantom"
+  map global user <a-f> ": phantom-selection-iterate-next<ret>" -docstring "phantom"
+  map global user <a-F> ": phantom-selection-iterate-prev<ret>" -docstring "phantom"
 }

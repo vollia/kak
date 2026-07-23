@@ -50,6 +50,13 @@ hook global RawKey .* %{
 }
 add-highlighter global/ dynregex '%opt{curword}' 0:CurWord
 
+# Git diff
+# ──────────
+
+set-face global DiffAdd green
+set-face global DiffRm red
+set-face global DiffMeta cyan
+
 # Line wrap
 # ──────────
 

@@ -41,6 +41,8 @@ source "%val{config}/lint.kak"
 # all plugins are here
 source "%val{config}/plug.kak"
 
+source "%val{config}/user-modes.kak"
+
 source "%val{config}/reasymotion.kak"
 
 try %{
