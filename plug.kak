@@ -37,9 +37,6 @@ plug "h-youhei/kakoune-surround" %{
   map global surround d ': delete-surround<ret>'        -docstring 'delete'
   map global surround t ': select-surrounding-tag<ret>' -docstring 'select tag'
 }
-# plug "alexherbo2/auto-pairs.kak" %{
-#   enable-auto-pairs
-# }
 plug "https://codeberg.org/straypetal71/twos.kak" config %{
     twos-register-defaults global
 }
@@ -141,6 +138,22 @@ plug "ul/kak-lsp" do %{
   }
   # clean
   hook global KakEnd .* lsp-exit
+}
+
+plug "occivink/kakoune-gdb" config %{
+  declare-user-mode gdb
+  map global user D ': enter-user-mode -lock gdb<ret>'  -docstring 'gdb'
+  map global user d ': enter-user-mode gdb<ret>'  -docstring 'gdb'
+  map global gdb S ': gdb-session-new<ret>'       -docstring 'new session'
+  map global gdb q ': gdb-session-stop<ret>'      -docstring 'quit session'
+  map global gdb r ': gdb-start<ret>'             -docstring 'start'
+  map global gdb c ': gdb-continue-or-run<ret>'   -docstring 'continue (start)'
+  map global gdb b ': gdb-toggle-breakpoint<ret>' -docstring 'breakpoint'
+  map global gdb n ': gdb-next<ret>'              -docstring 'next'
+  map global gdb s ': gdb-step<ret>'              -docstring 'step'
+  map global gdb u ': gdb-backtrace-up<ret>'      -docstring 'up'
+  map global gdb d ': gdb-backtrace-down<ret>'    -docstring 'down'
+  map global gdb p ': gdb-print<ret>'             -docstring 'print'
 }
 
 # snippets
