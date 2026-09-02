@@ -149,6 +149,7 @@ plug "occivink/kakoune-gdb" config %{
   map global gdb r ': gdb-start<ret>'             -docstring 'start'
   map global gdb c ': gdb-continue-or-run<ret>'   -docstring 'continue (start)'
   map global gdb b ': gdb-toggle-breakpoint<ret>' -docstring 'breakpoint'
+  map global gdb j ': gdb-jump-to-location<ret>'  -docstring 'jump to current'
   map global gdb n ': gdb-next<ret>'              -docstring 'next'
   map global gdb s ': gdb-step<ret>'              -docstring 'step'
   map global gdb u ': gdb-backtrace-up<ret>'      -docstring 'up'
