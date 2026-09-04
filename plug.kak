@@ -146,15 +146,14 @@ plug "occivink/kakoune-gdb" config %{
   map global user d ': enter-user-mode gdb<ret>'  -docstring 'gdb'
   map global gdb S ': gdb-session-new<ret>'       -docstring 'new session'
   map global gdb q ': gdb-session-stop<ret>'      -docstring 'quit session'
-  map global gdb r ': gdb-start<ret>'             -docstring 'start'
-  map global gdb c ': gdb-continue-or-run<ret>'   -docstring 'continue (start)'
+  map global gdb c ': gdb-continue-or-run<ret>'   -docstring 'continue / start'
   map global gdb b ': gdb-toggle-breakpoint<ret>' -docstring 'breakpoint'
   map global gdb j ': gdb-jump-to-location<ret>'  -docstring 'jump to current'
-  map global gdb n ': gdb-next<ret>'              -docstring 'next'
-  map global gdb s ': gdb-step<ret>'              -docstring 'step'
+  map global gdb n ': gdb-next<ret>: gdb-jump-to-location<ret>' -docstring 'next'
+  map global gdb s ': gdb-step<ret>: gdb-jump-to-location<ret>' -docstring 'step'
   map global gdb u ': gdb-backtrace-up<ret>'      -docstring 'up'
   map global gdb d ': gdb-backtrace-down<ret>'    -docstring 'down'
-  map global gdb p ': gdb-print<ret>'             -docstring 'print'
+  map global gdb p ': gdb-print<ret>'             -docstring 'print selection'
 }
 
 # snippets
