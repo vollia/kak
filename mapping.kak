@@ -69,6 +69,11 @@ map global fuzzy f ": kks-connect terminal kks-files<ret>"            -docstring
 map global fuzzy g ": kks-connect terminal kks-grep<ret>"             -docstring "grep"
 map global fuzzy <space> ": kks-connect terminal broot<ret>"          -docstring "broot"
 
+# Mistral Vibe
+# Map Ctrl+V to open Vibe pane (alternative to user mode V)
+map global normal <c-v> ': mistral-vibe-send<ret>' -docstring 'Send selection to Vibe'
+map global normal <c-V> ': mistral-vibe-send-ref<ret>' -docstring 'Send ref to Vibe'
+
 # alt + direction (insert mode)
 map global insert <a-h> '<a-;><a-h>'
 map global insert <a-j> '<a-;>o'

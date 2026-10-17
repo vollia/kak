@@ -163,3 +163,20 @@ plug "occivink/kakoune-phantom-selection" config %{
   map global user <a-f> ": phantom-selection-iterate-next<ret>" -docstring "phantom"
   map global user <a-F> ": phantom-selection-iterate-prev<ret>" -docstring "phantom"
 }
+
+## Vibe
+plug "vollia/kakoune-mistral-vibe" config %{
+  declare-user-mode vibe
+  map global user V ': enter-user-mode vibe<ret>' -docstring 'Vibe mode'
+  
+  map global vibe o ': mistral-vibe-open<ret>'          -docstring 'Open Vibe pane'
+  map global vibe O ': mistral-vibe-open-vertical<ret>' -docstring 'Open Vibe pane vertical'
+  map global vibe w ': mistral-vibe-open-window<ret>'   -docstring 'Open Vibe window'
+  map global vibe s ': mistral-vibe-send<ret>'          -docstring 'Send selection to Vibe'
+  map global vibe l ': mistral-vibe-send-line<ret>'     -docstring 'Send line to Vibe'
+  map global vibe b ': mistral-vibe-send-buffer<ret>'   -docstring 'Send buffer to Vibe'
+  map global vibe r ': mistral-vibe-send-buffile<ret>'  -docstring 'Send reference to current file'
+  map global vibe c ': mistral-vibe-clear<ret>'         -docstring 'Clear Vibe pane'
+  map global vibe f ': mistral-vibe-focus<ret>'         -docstring 'Focus Vibe pane'
+  map global vibe q ': enter-user-mode normal<ret>'     -docstring 'Exit Vibe mode'
+}
