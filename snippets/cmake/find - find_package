@@ -1,1 +1,0 @@
-find_package(${1:pkg} ${0:REQUIRED})

@@ -157,11 +157,17 @@ plug "occivink/kakoune-gdb" config %{
 }
 
 # snippets
-plug "occivink/kakoune-phantom-selection" config %{
-  map global user f     ": phantom-selection-add-selection<ret>" -docstring "phantom"
-  map global user F     ": phantom-selection-select-all; phantom-selection-clear<ret>" -docstring "phantom"
-  map global user <a-f> ": phantom-selection-iterate-next<ret>" -docstring "phantom"
-  map global user <a-F> ": phantom-selection-iterate-prev<ret>" -docstring "phantom"
+# plug "occivink/kakoune-phantom-selection" config %{
+#   map global user f     ": phantom-selection-add-selection<ret>" -docstring "phantom"
+#   map global user F     ": phantom-selection-select-all; phantom-selection-clear<ret>" -docstring "phantom"
+#   map global user <a-f> ": phantom-selection-iterate-next<ret>" -docstring "phantom"
+#   map global user <a-F> ": phantom-selection-iterate-prev<ret>" -docstring "phantom"
+# }
+
+plug "vollia/kak-snippets" config %{
+  set-option global snippets_path "%val{config}/snippets"
+  map global insert '<c-b>' '<esc>: snippets-expand<ret>: snippets-begin<ret>' -docstring 'expand snippet'
+  map global insert '<c-o>' '<esc>: snippets-jump<ret>' -docstring 'next snippet cursor'
 }
 
 ## Vibe

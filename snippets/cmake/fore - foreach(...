@@ -1,3 +1,0 @@
-foreach(${1:IT_NAME} ${2:$LIST})
-  ${0}
-endforeach()

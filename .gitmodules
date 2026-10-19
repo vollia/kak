@@ -1,1 +1,4 @@
 
+[submodule "snippets"]
+	path = snippets
+	url = git@github.com:vollia/kak-snippets-collection.git
